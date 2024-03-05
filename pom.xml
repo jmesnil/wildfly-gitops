@@ -10,7 +10,7 @@
   <packaging>pom</packaging>
   <properties>
     <!-- Specify the version of WildFly to provision -->
-    <version.wildfly>31.0.0.Final</version.wildfly>
+    <version.wildfly>31.0.1.Final</version.wildfly>
     <version.wildfly.maven.plugin>4.2.2.Final</version.wildfly.maven.plugin>
   </properties>
 
