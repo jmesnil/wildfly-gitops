@@ -21,6 +21,12 @@
         <version>31.0.0.Final</version>
         <type>war</type>
     </dependency>
+    <dependency>
+        <groupId>org.wildfly.quickstarts</groupId>
+        <artifactId>microprofile-config</artifactId>
+        <version>31.0.0.Final</version>
+        <type>war</type>
+    </dependency>
   </dependencies>
 
   <build>
