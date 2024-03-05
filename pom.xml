@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.wildfly.gitops</groupId>
+  <artifactId>wildfly-gitops</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+
+  <packaging>pom</packaging>
+  <properties>
+    <!-- Specify the version of WildFly to provision -->
+    <version.wildfly>31.0.0.Final</version.wildfly>
+    <version.wildfly.maven.plugin>4.2.2.Final</version.wildfly.maven.plugin>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.wildfly.plugins</groupId>
+        <artifactId>wildfly-maven-plugin</artifactId>
+        <version>${version.wildfly.maven.plugin}</version>
+        <configuration>
+          <feature-packs>
+            <feature-pack>
+              <groupId>org.wildfly</groupId>
+              <artifactId>wildfly-galleon-pack</artifactId>
+              <version>${version.wildfly}</version>
+            </feature-pack>
+          </feature-packs>
+        </configuration>
+        <executions>
+          <execution>
+            <id>provision-widfly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>provision</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

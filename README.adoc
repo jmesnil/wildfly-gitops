@@ -1,0 +1,3 @@
+WildFly - the GitOps Way
+
+This repository illustrates how to use the WildFly Maven Plug-in to provision, configure and maintain WildFly independantly of the application development
