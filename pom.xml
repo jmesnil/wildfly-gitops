@@ -52,13 +52,20 @@
               <version>${version.wildfly}</version>
             </feature-pack>
           </feature-packs>
+          <packaging-scripts>
+            <packaging-script>
+                <scripts>
+                    <script>${project.build.scriptSourceDirectory}/cors_filters.cli</script>
+                </scripts>
+            </packaging-script>
+        </packaging-scripts>
         </configuration>
         <executions>
           <execution>
             <id>provision-widfly</id>
             <phase>package</phase>
             <goals>
-              <goal>provision</goal>
+              <goal>package</goal>
             </goals>
           </execution>
         </executions>
