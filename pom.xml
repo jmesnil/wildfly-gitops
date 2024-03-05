@@ -15,6 +15,15 @@
   </properties>
 
   <dependencies>
+    <!-- We add the WildFly Galleon Pack as a provided POM dependency
+           to be able to  use dependabot to be notified of updates -->
+    <dependency>
+      <groupId>org.wildfly</groupId>
+      <artifactId>wildfly-galleon-pack</artifactId>
+      <version>${version.wildfly}</version>
+      <type>pom</type>
+      <scope>provided</scope>
+    </dependency>
     <dependency>
         <groupId>org.wildfly.quickstarts</groupId>
         <artifactId>helloworld</artifactId>
